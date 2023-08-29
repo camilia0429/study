@@ -1,0 +1,12 @@
+package Ex2_Message;
+
+public class MyClient {
+	public static void main(String[] args) {
+		
+//		프로그램 시작
+		System.out.println("입력 : ");
+		
+		
+	}//main
+
+}

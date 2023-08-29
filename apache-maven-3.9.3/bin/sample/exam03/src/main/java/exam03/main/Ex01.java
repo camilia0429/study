@@ -1,0 +1,17 @@
+package exam03.main;
+
+import exam03.aopex.Calculator;
+import exam03.config.AppCtx;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Ex01 {
+    public static void main(String[] args) {
+        AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(AppCtx.class);
+
+        Calculator cal = ctx.getBean(Calculator.class);
+        long result = cal.factorial(10);
+        System.out.println("Cal : "+result);
+
+        ctx.close();
+    }
+}

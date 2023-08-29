@@ -1,0 +1,90 @@
+package Ex3_Chat;
+
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class ChatClient extends JFrame implements Runnable {
+
+//	화면구성
+//	클라이언트에서 값을 보내고 받는걸 쉽게 확인하기 위해
+//	GUI를 통해서 확인하기
+	
+	JTextField input; //메세지를 입력하는 공간
+	JButton send_bt; //입력한 메세지를 전송하는 버튼
+	JTextArea area; //메세지를 화면에 출력하는 공간
+	JPanel south_p;
+	
+//	서버접속을 위한 객체
+	Socket s;
+	BufferedReader in; //읽기
+	PrintWriter out; //쓰기
+	Thread t;
+	
+	
+	public ChatClient() {
+		area = new JTextArea();
+		this.add(area);
+		
+		//BorederLayout배치 관리자로 지정된 JPanel생성
+		
+		south_p = new JPanel(new BorderLayout());
+		south_p.add(input = new JTextField());
+		south_p.add(send_bt = new JButton("보내기"),BorderLayout.EAST);
+		
+		this.add(south_p,BorderLayout.SOUTH);
+		
+		this.addWindowListener(new WindowAdapter() {
+			
+			@Override
+			public void windowClosing(WindowEvent e) {
+				out.println("xx:~X");//종료시 xx:~X라는 메세지를 전달
+			}
+			
+			
+		});
+		
+		send_bt.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				sendData(); //서버로 메세지를 전달하기 위한 메서드
+			}
+		});
+		
+		setBounds(100, 100, 400, 500);
+		setVisible(true);
+		
+		connected(); // 서버에 접속을 하기위한 메서드
+		
+//		서버로부터 전달되는 메세지를 감지하여 받는 스레드 생성
+		t = new Thread(this);
+		t.start();
+		
+	}//생성자
+	
+	public void connected(){
+		try {
+			s = new Socket("192.168.1.24",3200);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+}

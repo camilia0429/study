@@ -1,0 +1,14 @@
+package Ex2_Function;
+
+import java.util.function.Function;
+
+public class Ex4_Function {
+	public static void main(String[] args) {
+//		Function¿« «’º∫
+		
+		Function<String, Integer> f = (s) -> Integer.parseInt(s,16);
+		
+		
+	}//main
+
+}

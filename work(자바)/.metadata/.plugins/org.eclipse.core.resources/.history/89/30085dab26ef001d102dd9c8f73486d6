@@ -1,0 +1,21 @@
+package Ex2_Function;
+
+import java.util.function.UnaryOperator;
+
+public class Ex3_Function {
+	public static void main(String[] args) {
+		int result = square(10, x -> x*x);
+		
+		
+		
+		
+		
+		
+		
+	}//main
+	
+	public static int square(int num1, UnaryOperator<Integer> oper) {
+		return oper.apply(num1);
+	}
+
+}

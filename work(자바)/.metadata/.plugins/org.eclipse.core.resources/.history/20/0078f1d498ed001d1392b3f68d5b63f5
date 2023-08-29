@@ -1,0 +1,60 @@
+package Ex3_Chat;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+
+public class ChatServer extends Thread {
+	
+	ServerSocket ss;
+	ArrayList<CopyClient> list; //복사본 클라이언트를 담을 리스트를 준비
+	
+	public ChatServer() {
+		try {
+			
+			list = new ArrayList<CopyClient>(); // 리스트 생성
+			
+			ss = new ServerSocket(3200);
+//			서버소켓 객체가 생성되었다는 이유만으로 서버의 기능을 함
+			
+			System.out.println("서버시작");
+			
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		new ChatServer().start();
+		
+		
+	}//main
+	
+	@Override
+	public void run() {
+		try {
+			Socket s = ss.accept();
+			String ip = s.getInetAddress().getHostAddress();
+			System.out.println(ip+"님 접속");
+			
+			CopyClient cc = new CopyClient(s, this);
+			list.add(cc);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		while(true) {
+			
+		}
+		
+		
+		
+	}//run메서드
+
+}

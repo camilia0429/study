@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>flex</title>
+        </head>
+        <body>
+           <style>
+            ul {
+                list-style:none;
+                margin:0;
+                padding:0;
+            }
+            li {
+                margin:0;
+                padding:0;
+            }
+            li:first-of-type {
+                background: orange;
+            }
+            li:nth-of-type(2) {
+                background: blue;
+            }
+            li:last-of-type {
+                background: red;
+            }
+            ul.flex1 {
+                display:flex;
+                justify-content: space-between;
+            }
+            ul.flex2 {
+                display:flex;
+                justify-content: space-around;
+            }
+            ul.flex3 {
+                display:flex;
+                justify-content: space-evenly;
+            }
+           </style>
+           <ul class="flex1">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+           </ul>
+           <ul class="flex2">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+           </ul>
+           <ul class="flex3">
+            <li>메뉴1</li>
+            <li>메뉴2</li>
+            <li>메뉴3</li>
+           </ul>
+        </body>
+    </html>

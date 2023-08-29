@@ -1,0 +1,16 @@
+package Stream;
+
+import java.util.Arrays;
+
+public class Ex1_Stream {
+	public static void main(String[] args) {
+		String[] strArray = {"È«±æµ¿","±èÀÚ¹Ù","¹Ú¶÷´Ù"};
+		Arrays.stream(strArray);
+		
+		
+		
+		
+		
+	}//main
+
+}

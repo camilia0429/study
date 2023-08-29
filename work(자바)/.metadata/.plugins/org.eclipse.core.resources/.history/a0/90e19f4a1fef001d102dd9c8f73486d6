@@ -1,0 +1,14 @@
+package Calculator;
+
+public class Calculator4 {
+	public static void main(String[] args) {
+		MyCalculator calc = (num1,num2) -> num1+num2;
+		
+		
+		
+		
+		
+		
+	}//main
+
+}

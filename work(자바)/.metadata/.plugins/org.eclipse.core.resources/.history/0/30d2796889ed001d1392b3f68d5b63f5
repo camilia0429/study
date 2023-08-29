@@ -1,0 +1,28 @@
+package Ex2_Message;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class MyServer extends Thread {
+	
+	ServerSocket ss;
+	
+	public MyServer() {
+		try {
+			ss = new ServerSocket(3001);
+			System.out.println("서버 시작");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@Override
+	public void run() {
+//		thread가 해야할 일
+//		접속자를 받고,접속자가 입력한 문자열 받기
+//		그 문자열을 IP와 함께 출력
+		super.run();
+	}
+
+}

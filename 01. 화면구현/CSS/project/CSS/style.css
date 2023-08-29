@@ -1,0 +1,138 @@
+/* 공통 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+/* -------기본설정------- */
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing:border-box;
+    outline:none;
+}
+html {
+    font-size : 13px; /* 1rem = 13px */
+    color:#212121;
+}
+body {
+    margin:0;
+}
+
+ul, ol {
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+dl, dt, dd {
+    padding:0;
+    margin:0;
+}
+a {
+    text-decoration:none;
+}
+img {
+    border:0;
+}
+
+/* -------기본 설정 끝------- */
+
+/* -------상단 헤더------- */
+header {
+    display:flex;
+    justify-content:space-between;
+    height:66px;
+    border-bottom:1px solid #e6e6e6;
+    padding: 0 15px;
+    align-items:center;
+}
+header .logo img {
+    height:34px;
+}
+header > section i {
+    font-size: 1.85rem;
+}
+header >  section.left a {
+    margin-right:5px;
+}
+header >  section.right a {
+    margin-left:5px;
+}
+/* -------상단 헤더 끝------- */
+
+/* -------상단 메뉴------- */
+nav {
+    display:flex;
+    height:44px;
+}
+nav > a {
+    flex-grow:1;
+    width:0;
+    text-align:center;
+    color:#494949;
+    line-height:44px;
+    /* 텍스트를 가운데에 두고 싶을 때 박스높이와 행간의 높이를 같게 할 경우 가운데에 위치 하게 할 수 있다 */
+}
+/* -------상단 메뉴 끝------- */
+
+/* -------메인 배너------- */
+main .main_bg img {
+    width:100%;
+    display:block;
+}
+/* -------메인 배너 끝------- */
+
+/* -------하단메뉴------- */
+main .mid_menus {
+    display:flex;
+    flex-wrap:wrap;
+    border:10px solid #ccc;
+    border-left:0;
+    border-right:0;
+}
+main .mid_menus a {
+    width: calc(100% / 3);
+    /*calc(100% / 3)에서 퍼센트와 숫자 사이 연산자는 양쪽으로 띄어쓰기 해야만 인식 가능*/
+    text-align:center;
+    height:50px;
+    /*flex를 사용하면 높이 설정 가능*/
+    line-height:50px;
+    font-weight:500;
+    font-size:1.08rem;
+    border-top:1px solid #ededed;
+    border-left:1px solid #ededed;
+}
+main .mid_menus a:nth-of-type(3n+1) {
+    border-left:0;
+}
+main .mid_menus a:nth-of-type(1),
+main .mid_menus a:nth-of-type(2),
+main .mid_menus a:nth-of-type(3) {
+    border-top:0;
+}
+/* -------하단메뉴 끝------- */
+
+/* -------서브배너------- */
+main .sub_bg {
+    display:flex;
+    flex-wrap:wrap;
+    margin-bottom:20px;
+}
+main .sub_bg a:nth-of-type(1) {
+    width:100%
+}
+main .sub_bg a:nth-of-type(2),
+main .sub_bg a:nth-of-type(3) {
+    width:50%;
+}
+main .sub_bg img {
+    width:100%;
+    display:block;
+}
+/* -------서브배너 끝------- */
+
+/* -------상품 목록------- */
+.products h3 {
+    padding:20px;
+    line-height:1;
+    text-align:center;
+    font-size:1.54rem;
+}
+/* -------상품 목록 끝------- */
+
+

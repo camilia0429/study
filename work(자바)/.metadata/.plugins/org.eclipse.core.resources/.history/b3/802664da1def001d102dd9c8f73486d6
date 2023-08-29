@@ -1,0 +1,20 @@
+package Calculator;
+
+public class Calculator3 {
+	public static void main(String[] args) {
+		
+	
+		MyCalculator calc = (int num1,int num2) -> {
+			return num1+num2;
+		};
+		
+		
+		
+		
+		
+		
+		
+		
+	}//main
+
+}

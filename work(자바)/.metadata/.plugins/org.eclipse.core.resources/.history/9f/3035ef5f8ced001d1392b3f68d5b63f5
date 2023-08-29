@@ -1,0 +1,15 @@
+package Ex3_Chat;
+
+import java.net.ServerSocket;
+
+public class ChatServer extends Thread {
+	
+	ServerSocket ss;
+	
+	public ChatServer() {
+		ss = new ServerSocket(3200);
+	}
+	
+	
+
+}

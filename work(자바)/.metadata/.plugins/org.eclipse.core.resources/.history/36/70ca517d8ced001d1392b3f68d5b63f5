@@ -1,0 +1,28 @@
+package Ex3_Chat;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class ChatServer extends Thread {
+	
+	ServerSocket ss;
+	
+	public ChatServer() {
+		try {
+			ss = new ServerSocket(3200);
+//			서버소켓 객체가 생성되었다는 이유만으로 서버의 기능을 함
+			
+			System.out.println("서버시작");
+			
+			
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	
+
+}

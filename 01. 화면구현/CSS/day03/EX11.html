@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>overflow</title>
+        </head>
+        <body>
+           <style>
+            .box {
+                width:150px;
+                height:150px;
+                border :1px solid #000;
+                overflow:auto;
+            }
+            .text {
+                width:200px;
+                height:30px;
+                border:1px solid #000;
+                text-overflow:ellipsis;
+                white-space:nowrap;
+                overflow:hidden;
+            }
+           </style>
+           <div class="box">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti in doloremque esse nisi nemo iusto quis architecto nam debitis optio expedita, ab qui itaque porro eos voluptatem officia dolorum voluptate!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, voluptatum cum labore quibusdam sint quam sit nam explicabo natus eos modi hic repellat vel reiciendis dolorum nemo harum pariatur vero.
+           </div>
+           <br>
+           <div class="text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus quod vero aliquid molestiae nulla error officiis maiores rem dignissimos ex voluptas fugiat earum, odio tenetur, assumenda explicabo a quos excepturi.
+           </div>
+        </body>
+    </html>

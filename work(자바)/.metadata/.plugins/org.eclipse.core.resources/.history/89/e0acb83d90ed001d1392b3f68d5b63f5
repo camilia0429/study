@@ -1,0 +1,31 @@
+package Ex3_Chat;
+
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class ChatClient extends JFrame implements Runnable {
+
+//	화면구성
+//	클라이언트에서 값을 보내고 받는걸 쉽게 확인하기 위해
+//	GUI를 통해서 확인하기
+	
+	JTextField input; //메세지를 입력하는 공간
+	JButton send_bt; //입력한 메세지를 전송하는 버튼
+	JTextArea area; //메세지를 화면에 출력하는 공간
+	JPanel south_p;
+	
+//	서버접속을 위한 객체
+	Socket s;
+	BufferedReader in; //읽기
+	PrintWriter out; //쓰기
+	Thread t;
+	
+	
+}
